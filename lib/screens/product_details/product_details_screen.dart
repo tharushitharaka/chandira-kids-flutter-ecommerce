@@ -18,7 +18,6 @@ class ProductDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Product Details'),
-        backgroundColor: const Color(0xFFFF69B4),
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -67,13 +66,13 @@ class ProductDetailsScreen extends StatelessWidget {
                       vertical: 6,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFFF69B4).withValues(alpha: 0.1),
+                      color: const Color(0xFFF5C6D6).withValues(alpha: 0.2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
                       product.category,
                       style: const TextStyle(
-                        color: Color(0xFFFF69B4),
+                        color: Color(0xFF8D6E63),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -89,7 +88,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 32,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFFFF69B4),
+                          color: Color(0xFFF5C6D6),
                         ),
                       ),
                       // Rating
@@ -97,7 +96,7 @@ class ProductDetailsScreen extends StatelessWidget {
                         children: [
                           const Icon(
                             Icons.star,
-                            color: Colors.amber,
+                            color: Color(0xFFF5C6D6),
                             size: 24,
                           ),
                           const SizedBox(width: 4),
@@ -213,14 +212,14 @@ class ProductDetailsScreen extends StatelessWidget {
                                   content: Text(
                                       '${product.name} added to cart!'),
                                   duration: const Duration(seconds: 2),
-                                  backgroundColor: const Color(0xFFFF69B4),
+                                  backgroundColor: const Color(0xFF8D6E63),
                                 ),
                               );
                             }
                           : null,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFFF69B4),
-                        foregroundColor: Colors.white,
+                        backgroundColor: const Color(0xFFF5C6D6),
+                        foregroundColor: const Color(0xFF8D6E63),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),

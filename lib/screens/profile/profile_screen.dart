@@ -10,7 +10,6 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile'),
-        backgroundColor: const Color(0xFFFF69B4),
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -20,11 +19,11 @@ class ProfileScreen extends StatelessWidget {
             // Profile Avatar
             CircleAvatar(
               radius: 60,
-              backgroundColor: const Color(0xFFFF69B4).withValues(alpha: 0.2),
+              backgroundColor: const Color(0xFFF5C6D6).withValues(alpha: 0.2),
               child: const Icon(
                 Icons.person,
                 size: 60,
-                color: Color(0xFFFF69B4),
+                color: Color(0xFFF5C6D6),
               ),
             ),
             const SizedBox(height: 16),
@@ -193,7 +192,7 @@ class ProfileScreen extends StatelessWidget {
               Icon(
                 icon,
                 size: 32,
-                color: const Color(0xFFFF69B4),
+                color: const Color(0xFFF5C6D6),
               ),
               const SizedBox(height: 8),
               Text(
@@ -201,7 +200,7 @@ class ProfileScreen extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFFF69B4),
+                  color: Color(0xFFF5C6D6),
                 ),
               ),
               const SizedBox(height: 4),
@@ -235,7 +234,7 @@ class ProfileScreen extends StatelessWidget {
       child: ListTile(
         leading: Icon(
           icon,
-          color: iconColor ?? const Color(0xFFFF69B4),
+          color: iconColor ?? const Color(0xFF8D6E63),
         ),
         title: Text(
           title,
@@ -259,7 +258,7 @@ class ProfileScreen extends StatelessWidget {
       applicationIcon: const Icon(
         Icons.child_care,
         size: 48,
-        color: Color(0xFFFF69B4),
+        color: Color(0xFFF5C6D6),
       ),
       children: [
         const SizedBox(height: 16),

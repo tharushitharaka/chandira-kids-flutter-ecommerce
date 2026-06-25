@@ -3,7 +3,7 @@ import '../models/product.dart';
 import '../screens/product_details/product_details_screen.dart';
 
 /// Product Card Widget
-/// Displays product information in a card format
+/// Displays product information in a modern card format with rounded corners and soft shadows
 class ProductCard extends StatelessWidget {
   final Product product;
 
@@ -24,9 +24,9 @@ class ProductCard extends StatelessWidget {
         );
       },
       child: Card(
-        elevation: 2,
+        elevation: 3,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,14 +36,14 @@ class ProductCard extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: const Color(0xFFFFE4EC),
                   borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(12),
+                    top: Radius.circular(16),
                   ),
                 ),
                 child: ClipRRect(
                   borderRadius: const BorderRadius.vertical(
-                    top: Radius.circular(12),
+                    top: Radius.circular(16),
                   ),
                   child: Hero(
                     tag: 'product_${product.id}',
@@ -51,8 +51,12 @@ class ProductCard extends StatelessWidget {
                       product.imageUrl,
                       fit: BoxFit.cover,
                       errorBuilder: (context, error, stackTrace) {
-                        return const Center(
-                          child: Icon(Icons.image_not_supported, size: 50),
+                        return Center(
+                          child: Icon(
+                            Icons.image_not_supported,
+                            size: 50,
+                            color: const Color(0xFF8D6E63).withValues(alpha: 0.3),
+                          ),
                         );
                       },
                     ),
@@ -72,6 +76,7 @@ class ProductCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
+                      color: Color(0xFF8D6E63),
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
@@ -82,7 +87,7 @@ class ProductCard extends StatelessWidget {
                     product.category,
                     style: TextStyle(
                       fontSize: 12,
-                      color: Colors.grey[600],
+                      color: const Color(0xFF8D6E63).withValues(alpha: 0.6),
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -96,7 +101,7 @@ class ProductCard extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFFFF69B4),
+                          color: Color(0xFFF5C6D6),
                         ),
                       ),
                       // Rating
@@ -105,12 +110,15 @@ class ProductCard extends StatelessWidget {
                           const Icon(
                             Icons.star,
                             size: 16,
-                            color: Colors.amber,
+                            color: Color(0xFFF5C6D6),
                           ),
                           const SizedBox(width: 4),
                           Text(
                             product.rating.toString(),
-                            style: const TextStyle(fontSize: 12),
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: Color(0xFF8D6E63),
+                            ),
                           ),
                         ],
                       ),

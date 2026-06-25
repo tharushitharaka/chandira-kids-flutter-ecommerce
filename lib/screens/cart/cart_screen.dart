@@ -13,7 +13,6 @@ class CartScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Shopping Cart'),
-        backgroundColor: const Color(0xFFFF69B4),
         elevation: 0,
         actions: [
           // Clear Cart Button
@@ -89,8 +88,8 @@ class CartScreen extends StatelessWidget {
               Navigator.pop(context);
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFFF69B4),
-              foregroundColor: Colors.white,
+              backgroundColor: const Color(0xFFF5C6D6),
+              foregroundColor: const Color(0xFF8D6E63),
               padding: const EdgeInsets.symmetric(
                 horizontal: 32,
                 vertical: 16,
@@ -173,7 +172,7 @@ class CartScreen extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFFFF69B4),
+                      color: Color(0xFFF5C6D6),
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -283,7 +282,7 @@ class CartScreen extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFFF69B4),
+                  color: Color(0xFFF5C6D6),
                 ),
               ),
             ],
@@ -304,8 +303,8 @@ class CartScreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFFF69B4),
-                foregroundColor: Colors.white,
+                backgroundColor: const Color(0xFFF5C6D6),
+                foregroundColor: const Color(0xFF8D6E63),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),

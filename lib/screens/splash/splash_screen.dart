@@ -3,7 +3,7 @@ import 'dart:async';
 import '../home/home_screen.dart';
 
 /// Splash Screen for Chandira Kids App
-/// Displays logo with pink gradient background and auto-navigates after 2 seconds
+/// Modern fashion-store design with gradient background and auto-navigation
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -32,12 +32,12 @@ class _SplashScreenState extends State<SplashScreen>
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
             colors: [
-              Color(0xFFFF69B4), // Hot Pink
-              Color(0xFFFFB6C1), // Light Pink
-              Color(0xFFFFC0CB), // Pink
+              Color(0xFFF5C6D6), // Primary
+              Color(0xFFFFE4EC), // Secondary
+              Color(0xFFF5C6D6), // Primary
             ],
           ),
         ),
@@ -47,42 +47,57 @@ class _SplashScreenState extends State<SplashScreen>
             children: [
               // Logo/Brand Name
               Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withValues(alpha: 0.1),
-                      blurRadius: 20,
-                      offset: const Offset(0, 10),
+                      blurRadius: 30,
+                      offset: const Offset(0, 15),
                     ),
                   ],
                 ),
-                child: const Text(
-                  'Chandira Kids',
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFFFF69B4),
-                    letterSpacing: 1.5,
-                  ),
+                child: Column(
+                  children: [
+                    // Icon
+                    const Icon(
+                      Icons.child_care,
+                      size: 64,
+                      color: Color(0xFFF5C6D6),
+                    ),
+                    const SizedBox(height: 16),
+                    // Brand Name
+                    const Text(
+                      'Chandira Kids',
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF8D6E63),
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 32),
               // Tagline
               const Text(
-                'Fashion for Little Princesses',
+                'Fashion for Every Little Princess',
                 style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xFF8D6E63),
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1,
                 ),
+                textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 48),
               // Loading indicator
               const CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF8D6E63)),
+                strokeWidth: 3,
               ),
             ],
           ),

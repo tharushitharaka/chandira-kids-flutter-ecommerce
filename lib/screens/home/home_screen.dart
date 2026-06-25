@@ -35,8 +35,11 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentIndex = index;
           });
         },
-        selectedItemColor: const Color(0xFFFF69B4),
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: const Color(0xFF8D6E63),
+        unselectedItemColor: const Color(0xFF8D6E63).withValues(alpha: 0.5),
+        backgroundColor: const Color(0xFFF5C6D6),
+        elevation: 8,
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -100,7 +103,6 @@ class _HomeContentState extends State<_HomeContent> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Chandira Kids'),
-        backgroundColor: const Color(0xFFFF69B4),
         elevation: 0,
         actions: [
           // Cart Icon with badge
@@ -121,7 +123,7 @@ class _HomeContentState extends State<_HomeContent> {
                       child: Container(
                         padding: const EdgeInsets.all(4),
                         decoration: const BoxDecoration(
-                          color: Colors.red,
+                          color: Color(0xFF8D6E63),
                           shape: BoxShape.circle,
                         ),
                         constraints: const BoxConstraints(
@@ -166,11 +168,6 @@ class _HomeContentState extends State<_HomeContent> {
                         },
                       )
                     : null,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                filled: true,
-                fillColor: Colors.grey[100],
               ),
               onChanged: (value) {
                 setState(() {
@@ -200,9 +197,13 @@ class _HomeContentState extends State<_HomeContent> {
                         _selectedCategory = category;
                       });
                     },
-                    selectedColor: const Color(0xFFFF69B4).withValues(alpha: 0.2),
-                    checkmarkColor: const Color(0xFFFF69B4),
-                    backgroundColor: Colors.grey[200],
+                    selectedColor: const Color(0xFFF5C6D6).withValues(alpha: 0.3),
+                    checkmarkColor: const Color(0xFF8D6E63),
+                    backgroundColor: const Color(0xFFFFE4EC),
+                    labelStyle: TextStyle(
+                      color: isSelected ? const Color(0xFF8D6E63) : const Color(0xFF8D6E63).withValues(alpha: 0.7),
+                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                    ),
                   ),
                 );
               },
@@ -219,14 +220,14 @@ class _HomeContentState extends State<_HomeContent> {
                         Icon(
                           Icons.search_off,
                           size: 64,
-                          color: Colors.grey[400],
+                          color: const Color(0xFF8D6E63).withValues(alpha: 0.3),
                         ),
                         const SizedBox(height: 16),
                         Text(
                           'No products found',
                           style: TextStyle(
                             fontSize: 18,
-                            color: Colors.grey[600],
+                            color: const Color(0xFF8D6E63).withValues(alpha: 0.6),
                           ),
                         ),
                       ],
