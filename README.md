@@ -2,16 +2,20 @@
 
 A modern mini e-commerce Flutter application developed for the CyphLab Flutter Developer Intern Practical Task.
 
+## 🎯 Project Purpose
+
+Flutter internship practical task for CyphLab – mini e-commerce app for girls' clothing store "Chandira Kids".
+
 ## Features
 
-- Splash Screen
-- Product Listing Screen
-- Product Details Screen
-- Shopping Cart Management
-- Profile Screen
-- Product Search
-- Category Filtering
-- Dark Mode Support
+- Splash Screen with auto-navigation
+- Product Listing Screen with search and category filters
+- Product Details Screen with hero animations
+- Shopping Cart Management with quantity controls
+- Profile Screen with user stats and menu options
+- Product Search functionality
+- Category Filtering (All, Party Wear, Casual, Birthday, Summer)
+- Modern 2026 design system
 - Responsive Mobile UI
 
 ## Tech Stack
@@ -24,14 +28,50 @@ A modern mini e-commerce Flutter application developed for the CyphLab Flutter D
 
 ```
 lib/
-├── data/
-├── models/
-├── providers/
-├── screens/
-├── widgets/
-├── utils/
-└── main.dart
+├── data/              # Mock data and data sources
+├── models/            # Data models (Product, CartItem)
+├── providers/         # State management (CartProvider)
+├── screens/           # UI screens (Splash, Home, Product Details, Cart, Profile)
+├── widgets/           # Reusable widgets (ProductCard)
+└── utils/             # Utility functions and helpers
 ```
+
+## 🧠 Key Learnings
+
+- Provider state management for reactive UI updates
+- Clean architecture with separation of concerns
+- UI/UX design for e-commerce apps
+- Flutter navigation system with bottom navigation
+- Hero animations for smooth transitions
+- Material Design 3 theming
+- Responsive layout design
+
+## 🚀 App Highlights
+
+- Smooth Hero animations between screens
+- Responsive UI that works on all screen sizes
+- Modern 2026 design system with custom color palette
+- Scalable folder structure for maintainability
+- Clean code following Flutter best practices
+- No analysis errors (flutter analyze passes)
+- Professional, internship-ready implementation
+
+## 📱 Screenshots
+
+![Splash Screen](screenshots/splash.png)
+*Splash screen with logo and auto-navigation*
+
+![Home Screen](screenshots/home.png)
+*Home screen with search, category filters, and product grid*
+
+![Product Details Screen](screenshots/product.png)
+*Product details with hero animation and add to cart*
+
+![Cart Screen](screenshots/cart.png)
+*Shopping cart with quantity controls and checkout*
+
+![Profile Screen](screenshots/profile.png)
+*User profile with stats and menu options*
 
 ## Getting Started
 
