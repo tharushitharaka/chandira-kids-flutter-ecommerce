@@ -45,14 +45,17 @@ class ProductCard extends StatelessWidget {
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(12),
                   ),
-                  child: Image.asset(
-                    product.imageUrl,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Center(
-                        child: Icon(Icons.image_not_supported, size: 50),
-                      );
-                    },
+                  child: Hero(
+                    tag: 'product_${product.id}',
+                    child: Image.asset(
+                      product.imageUrl,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Center(
+                          child: Icon(Icons.image_not_supported, size: 50),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
